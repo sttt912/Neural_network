@@ -1,3 +1,9 @@
+/*
+Author: sttt912(https://github.com/sttt912)
+Р“СЂР° РІ С…СЂРµСЃС‚РёРєРё РЅРѕР»РёРєРё РІРёРєРѕСЂРёСЃС‚РѕРІСѓСЋС‡Рё С„Р°РЅ fann
+РљРѕРґ РґР»СЏ РЅР°РІС‡Р°РЅРЅСЏ
+*/
+
 #include "stdafx.h"
 #include "iostream"
 #include "stdio.h"
@@ -11,9 +17,9 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	setlocale(LC_CTYPE, "rus"); // вызов функции настройки локали
+	setlocale(LC_CTYPE, "rus");
 
-	cout << "Шаг 1\n";
+	cout << "ГГ ГЈ 1\n";
 	const unsigned int num_input = 9;
 	const unsigned int num_output = 9;
 	const unsigned int num_layers = 3;
@@ -27,7 +33,7 @@ int main(int argc, char* argv[])
 
 	// create
 
-	cout << "Шаг 2. Создание\n";
+	cout << "ГГ ГЈ 2. Г‘Г®Г§Г¤Г Г­ГЁГҐ\n";
 	struct fann *ann = fann_create_standard(num_layers, num_input,
 		num_neurons_hidden, num_output);
 
@@ -47,7 +53,7 @@ int main(int argc, char* argv[])
 	calc_out = fann_run(ann, input);
 
 	//Result... test
-	printf("\nВход: (%f,%f,%f,%f,%f,%f,%f,%f,%f)\n\n", input[0], input[1], input[2], input[3], input[4], input[5], input[6], input[7], input[8]);
+	printf("\nГ‚ГµГ®Г¤: (%f,%f,%f,%f,%f,%f,%f,%f,%f)\n\n", input[0], input[1], input[2], input[3], input[4], input[5], input[6], input[7], input[8]);
 
 
 	
@@ -59,7 +65,7 @@ int main(int argc, char* argv[])
 		else if (calc_out[i] * 10 <= -7) {
 			cout << "-1\n";
 		}
-		else {  // иначе
+		else {  // ГЁГ­Г Г·ГҐ
 			cout << "0" << endl;
 		}
 
