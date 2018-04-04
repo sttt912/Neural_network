@@ -1,3 +1,9 @@
+/*
+Author: sttt912(https://github.com/sttt912)
+–ì—Ä–∞ –≤ —Ö—Ä–µ—Å—Ç–∏–∫–∏ –Ω–æ–ª–∏–∫–∏ –≤–∏–∫–æ—Ä–∏—Å—Ç–æ–≤—É—é—á–∏ —Ñ–∞–Ω fann
+*/
+
+
 #include "stdafx.h"
 #include "iostream"
 #include "stdio.h"
@@ -13,14 +19,14 @@ fann_type *calc_out;
 
 
 
-void print_input(){ //‚ıÓ‰
+void print_input(){
 	cout << "Game board\n"; 
 	cout << "-" << input[1] << "-|-" << input[2] << "-|-" << input[3] << "- \n";
 	cout << "-" << input[4] << "-|-" << input[5] << "-|-" << input[6] << "- \n";
 	cout << "-" << input[7] << "-|-" << input[8] << "-|-" << input[9] << "- \n";
 }
 
-void print_output(){ //‚˚ıÓ‰
+void print_output(){
 	cout << "Game board\n";
 	cout << "-" << calc_out[1] << "-|-" << calc_out[2] << "-|-" << calc_out[3] << "- \n";
 	cout << "-" << calc_out[4] << "-|-" << calc_out[5] << "-|-" << calc_out[6] << "- \n";
@@ -35,7 +41,7 @@ void help(){ //help
 }
 
 
-void new_game() { //first raund
+void new_game() { //raund
 
 	for (int i = 0; i <= 8; i++) {
 		input[i] = 0;
@@ -53,7 +59,7 @@ void new_game() { //first raund
 
 int main(int argc, char* argv[])
 {
-	setlocale(LC_CTYPE, "rus"); // ‚˚ÁÓ‚ ÙÛÌÍˆËË Ì‡ÒÚÓÈÍË ÎÓÍ‡ÎË
+	setlocale(LC_CTYPE, "rus"); 
 
 
 		struct fann *ann = fann_create_from_file("st.net");
